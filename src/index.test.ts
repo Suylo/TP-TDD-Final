@@ -48,6 +48,17 @@ describe('NQueensCalc tests', () => {
 
     expect(index.NQueensCalc(5)).toEqual(output);
   });
+
+  it('should return more than 3 solutions (N = 6)', () => {
+    // when N = 6, 4 is expected
+    expect(index.NQueensCalc(6).length).toBeGreaterThan(3);
+  });
+
+  it('should return more than 30 solutions (N = 7)', () => {
+    // when N = 7, 40 is expected
+    expect(index.NQueensCalc(7).length).toBeGreaterThan(30);
+  });
+
 });
 
 
