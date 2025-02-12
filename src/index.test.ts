@@ -59,6 +59,17 @@ describe('NQueensCalc tests', () => {
     expect(index.NQueensCalc(7).length).toBeGreaterThan(30);
   });
 
+  it('should return solutions in the correct format', () => {
+    const solutions = index.NQueensCalc(4);
+    solutions.forEach(board => {
+      expect(board.length).toBe(4);
+      board.forEach(row => {
+        expect(row.length).toBe(4);
+        expect(row).toMatch(/^[O#]+$/);
+      });
+    });
+  });
+
 });
 
 
