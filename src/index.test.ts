@@ -20,6 +20,10 @@ describe('NQueensCalc test', () => {
     expect(index.NQueensCalc(2)).toEqual([]);
     expect(index.NQueensCalc(3)).toEqual([]);
   });
+
+  it('should return one solution (N = 1) ', () => {
+    expect(index.NQueensCalc(1)).toEqual([["#"]]);
+  });
 });
 
 
