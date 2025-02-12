@@ -12,3 +12,14 @@ describe('Input test', () => {
     expectTypeOf(index.INPUT).toEqualTypeOf<number>();
   });
 });
+
+
+describe('NQueensCalc test', () => {
+  it('should return empty array (no solution)', () => {
+    expect(index.NQueensCalc(0)).toEqual([]);
+    expect(index.NQueensCalc(2)).toEqual([]);
+    expect(index.NQueensCalc(3)).toEqual([]);
+  });
+});
+
+
