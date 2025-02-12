@@ -35,7 +35,7 @@ function NQueensCalc(N: number): Board[] {
     if (row === N) {
       solutions.push(
           board.map((col) =>
-              Array.from({ length: N }, (_, i) => (i === col ? "#" : "O")).join("")
+              Array.from({length: N}, (_, i) => (i === col ? "#" : "O")).join("")
           )
       );
       return;

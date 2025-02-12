@@ -23,7 +23,7 @@ describe('NQueensCalc tests', () => {
 
   it('should return 1 solution (N = 1)', () => {
     const output = [
-        ["#"]
+      ["#"]
     ];
 
     expect(index.NQueensCalc(1)).toEqual(output);
@@ -31,7 +31,7 @@ describe('NQueensCalc tests', () => {
 
   it('should return 2 solutions (N = 4)', () => {
     const output = [
-        ["O#OO", "OOO#", "#OOO", "OO#O"], ["OO#O", "#OOO", "OOO#", "O#OO"]
+      ["O#OO", "OOO#", "#OOO", "OO#O"], ["OO#O", "#OOO", "OOO#", "O#OO"]
     ];
 
     expect(index.NQueensCalc(4)).toEqual(output);
