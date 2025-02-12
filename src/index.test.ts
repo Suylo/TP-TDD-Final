@@ -21,16 +21,32 @@ describe('NQueensCalc tests', () => {
     expect(index.NQueensCalc(3)).toEqual([]);
   });
 
-  it('should return one solution (N = 1)', () => {
-    const output = [["#"]];
+  it('should return 1 solution (N = 1)', () => {
+    const output = [
+        ["#"]
+    ];
 
     expect(index.NQueensCalc(1)).toEqual(output);
   });
 
   it('should return 2 solutions (N = 4)', () => {
-    const output = [["O#OO", "OOO#", "#OOO", "OO#O"], ["OO#O", "#OOO", "OOO#", "O#OO"]];
+    const output = [
+        ["O#OO", "OOO#", "#OOO", "OO#O"], ["OO#O", "#OOO", "OOO#", "O#OO"]
+    ];
 
     expect(index.NQueensCalc(4)).toEqual(output);
+  });
+
+  it('should return 10 solutions (N = 5)', () => {
+    const output = [
+      ['#OOOO', 'OO#OO', 'OOOO#', 'O#OOO', 'OOO#O'], ['#OOOO', 'OOO#O', 'O#OOO', 'OOOO#', 'OO#OO'],
+      ['O#OOO', 'OOO#O', '#OOOO', 'OO#OO', 'OOOO#'], ['O#OOO', 'OOOO#', 'OO#OO', '#OOOO', 'OOO#O'],
+      ['OO#OO', '#OOOO', 'OOO#O', 'O#OOO', 'OOOO#'], ['OO#OO', 'OOOO#', 'O#OOO', 'OOO#O', '#OOOO'],
+      ['OOO#O', '#OOOO', 'OO#OO', 'OOOO#', 'O#OOO'], ['OOO#O', 'O#OOO', 'OOOO#', 'OO#OO', '#OOOO'],
+      ['OOOO#', 'O#OOO', 'OOO#O', '#OOOO', 'OO#OO'], ['OOOO#', 'OO#OO', '#OOOO', 'OOO#O', 'O#OOO']
+    ];
+
+    expect(index.NQueensCalc(5)).toEqual(output);
   });
 });
 
