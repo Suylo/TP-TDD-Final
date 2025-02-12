@@ -24,6 +24,10 @@ describe('NQueensCalc test', () => {
   it('should return one solution (N = 1) ', () => {
     expect(index.NQueensCalc(1)).toEqual([["#"]]);
   });
+
+  it('should return 2 solutions when N = 4', () => {
+    expect(index.NQueensCalc)
+  });
 });
 
 

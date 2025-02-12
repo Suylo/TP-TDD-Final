@@ -1,7 +1,9 @@
 // Input
 const INPUT: number = 4;
 
-function NQueensCalc(N: number) {
+type Board = string[];
+
+function NQueensCalc(N: number): Board[] {
   if (N < 0) {
     throw new Error('N must be greater than 0');
   }
@@ -13,6 +15,8 @@ function NQueensCalc(N: number) {
   if (N === 1) {
     return [["#"]];
   }
+
+  return [[]];
 }
 
 
