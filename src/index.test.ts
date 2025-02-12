@@ -26,7 +26,9 @@ describe('NQueensCalc test', () => {
   });
 
   it('should return 2 solutions when N = 4', () => {
-    expect(index.NQueensCalc)
+    const output = [["O#OO", "OOO#", "#OOO", "OO#O"], ["OO#O", "#OOO", "OOO#", "O#OO" ]];
+
+    expect(index.NQueensCalc(4)).toEqual(output);
   });
 });
 
