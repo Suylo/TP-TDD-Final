@@ -1,7 +1,7 @@
 import {describe, expect, expectTypeOf, it} from "vitest";
 import {index} from "./index";
 
-describe('Input test', () => {
+describe('Input tests', () => {
   it('should reject when value is under 0', () => {
     expect(() => {
       index.NQueensCalc(-1);
@@ -14,19 +14,21 @@ describe('Input test', () => {
 });
 
 
-describe('NQueensCalc test', () => {
+describe('NQueensCalc tests', () => {
   it('should return empty array (no solution)', () => {
     expect(index.NQueensCalc(0)).toEqual([]);
     expect(index.NQueensCalc(2)).toEqual([]);
     expect(index.NQueensCalc(3)).toEqual([]);
   });
 
-  it('should return one solution (N = 1) ', () => {
-    expect(index.NQueensCalc(1)).toEqual([["#"]]);
+  it('should return one solution (N = 1)', () => {
+    const output = [["#"]];
+
+    expect(index.NQueensCalc(1)).toEqual(output);
   });
 
-  it('should return 2 solutions when N = 4', () => {
-    const output = [["O#OO", "OOO#", "#OOO", "OO#O"], ["OO#O", "#OOO", "OOO#", "O#OO" ]];
+  it('should return 2 solutions (N = 4)', () => {
+    const output = [["O#OO", "OOO#", "#OOO", "OO#O"], ["OO#O", "#OOO", "OOO#", "O#OO"]];
 
     expect(index.NQueensCalc(4)).toEqual(output);
   });
